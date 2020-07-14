@@ -4,6 +4,7 @@ import argparse
 import logging
 from typing import Union, Text, Iterator, Tuple
 from info_graph_dot import InfoGraphDot
+from info_graph_html import InfoGraphHTML
 
 PATH = Union[bytes, Text]
 me = os.path.abspath(os.path.dirname(__file__))
@@ -28,9 +29,15 @@ def main(working_dir: PATH, args: argparse.Namespace):
     log.debug(f"Generate output for templates '{args.templates}'")
     log.debug(f" - output directory: '{working_dir}")
 
-    info_graph_dot = InfoGraphDot()
+    command = None
+    if args.templates == 'info_graph_dot':
+        command = InfoGraphDot()
+    elif args.templates == 'info_graph_html':
+        command = InfoGraphHTML()
+    else:
+        raise Exception(f"Invalid args.templates: '{args.templates}'")
     os.chdir(working_dir)
-    info_graph_dot.setup()
+    command.setup()
 
     readme_all = os.path.join(working_dir, 'README.md')
     with open(readme_all, 'w') as f:
@@ -40,7 +47,7 @@ def main(working_dir: PATH, args: argparse.Namespace):
         for name, path in get_templates(templates_dir):
             log.info(f"{name}: {path}")
             
-            filename = info_graph_dot.run(name, path)
+            filename = command.run(name, path)
             f.write(f"* [{name}]({filename})\n")
 
 
