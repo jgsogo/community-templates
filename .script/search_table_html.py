@@ -8,9 +8,9 @@ from jinja2 import Template
 
 log = logging.getLogger('templates')
 
-class InfoGraphDot:
+class SearchTableHTML:
     reference = "jinja2cpp/1.1.0@"
-    template_filename = 'info_graph.dot'
+    template_filename = 'search_table.html'
     _target_template_path = None
 
     output_template = Template(textwrap.dedent("""
@@ -37,7 +37,7 @@ class InfoGraphDot:
         conan_home = stdout.decode('utf8').strip()
         target_template_directory = os.path.join(conan_home, 'templates', 'output')
         os.makedirs(target_template_directory, exist_ok=True)
-        self._target_template_path = os.path.join(target_template_directory, 'info_graph.dot')
+        self._target_template_path = os.path.join(target_template_directory, 'search_table.html')
 
     def setup(self):
         process = subprocess.Popen(['conan', 'install', self.reference, '--remote', 'conan-center'],
@@ -55,18 +55,18 @@ class InfoGraphDot:
         shutil.copyfile(template_filename, self._target_template_path)
 
         # Run the actual work
-        output_file = name + '.dot'
-        process = subprocess.Popen(['conan', 'info', self.reference, '--graph', output_file],
+        output_file = name + '.html'
+        process = subprocess.Popen(['conan', 'search', self.reference, '--remote', 'conan-center', '--table', output_file],
                      stdout=subprocess.PIPE, 
                      stderr=subprocess.PIPE)
         stdout, stderr = process.communicate()
 
         # Take the picture
         picture_file = name + '.png'
-        process = subprocess.Popen(['dot', '-Tpng', '-Gdpi=300', f'-o{picture_file}', output_file],
-                     stdout=subprocess.PIPE, 
-                     stderr=subprocess.PIPE)
+        command = ['google-chrome', '--headless', '--disable-gpu', '--screenshot', output_file]
+        process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, stderr = process.communicate()
+        shutil.copyfile("screenshot.png", picture_file)
 
         # Generate the output
         with open(f"{name}.md", 'w') as f:

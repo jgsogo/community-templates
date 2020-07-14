@@ -5,6 +5,8 @@ import logging
 from typing import Union, Text, Iterator, Tuple
 from info_graph_dot import InfoGraphDot
 from info_graph_html import InfoGraphHTML
+from search_table_html import SearchTableHTML
+
 
 PATH = Union[bytes, Text]
 me = os.path.abspath(os.path.dirname(__file__))
@@ -34,6 +36,8 @@ def main(working_dir: PATH, args: argparse.Namespace):
         command = InfoGraphDot()
     elif args.templates == 'info_graph_html':
         command = InfoGraphHTML()
+    elif args.templates == 'search_table_html':
+        command = SearchTableHTML()
     else:
         raise Exception(f"Invalid args.templates: '{args.templates}'")
     os.chdir(working_dir)

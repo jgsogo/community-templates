@@ -27,7 +27,7 @@ class InfoGraphHTML:
         Output
 
         <p align="center">
-            <img src="{{ name }}.png" width="350" title="{{ name }}">
+            <img src="{{ name }}.png" width="800" title="{{ name }}">
         </p>
     """))
 

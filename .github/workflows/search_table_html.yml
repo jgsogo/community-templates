@@ -4,11 +4,11 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'search_table_html/**'
+    #paths:
+    #  - 'search_table_html/**'
   schedule:
     - cron:  '0 1 * * *'
-
+    
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -17,4 +17,39 @@ jobs:
                 python-version: [3.8]
 
         steps:
-        - uses: actions/checkout@v1
+        - uses: actions/checkout@v2
+          with:
+            path: main
+        - uses: actions/checkout@v2
+          with:
+            ref: gh-pages
+            path: _working_dir
+
+        - name: Set up Python ${{ matrix.python-version }}
+          uses: actions/setup-python@v1
+          with:
+            python-version: ${{ matrix.python-version }}
+        - name: Install dependencies
+          run: |
+            sudo apt -y install wget
+            sudo apt-get install -y libappindicator1 fonts-liberation
+            wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+            sudo dpkg -i google-chrome-stable_current_amd64.deb
+            python -m pip install --upgrade pip
+            pip install -r main/.script/requirements.txt
+
+        - name: Generate output for all templates
+          run: |
+            mkdir -p _working_dir/search_table_html
+            python main/.script/main.py --templates=search_table_html --output=_working_dir
+            
+        - name: Commit and push
+          run: |
+            cd _working_dir
+            git config user.name github-actions
+            git config user.email github-actions-bot@users.noreply.github.com
+            git config pull.rebase true
+            git add .
+            git commit -m "Generated files for 'search_table.html' templates"
+            git pull
+            git push
