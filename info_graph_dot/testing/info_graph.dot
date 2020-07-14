@@ -1,0 +1,5 @@
+digraph {
+    {%- for src, dst in graph.edges %}
+        "{{ src.label }}" -> "AAA"
+    {%- endfor %}
+}
