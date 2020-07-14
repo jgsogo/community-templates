@@ -12,5 +12,5 @@ conan config install .... WIP
 Output
 
 <p align="center">
-    <img src="testing.png" width="350" title="testing">
+    <img src="testing.png" width="800" title="testing">
 </p>

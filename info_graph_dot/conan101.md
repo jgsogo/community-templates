@@ -12,5 +12,5 @@ conan config install .... WIP
 Output
 
 <p align="center">
-    <img src="conan101.png" width="350" title="conan101">
+    <img src="conan101.png" width="800" title="conan101">
 </p>
