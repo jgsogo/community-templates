@@ -71,3 +71,5 @@ class InfoGraphDot:
         # Generate the output
         with open(f"{name}.md", 'w') as f:
             f.write(self.output_template.render(name=name, install_path="WIP"))
+
+        return f"{name}.md"

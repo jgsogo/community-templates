@@ -32,11 +32,16 @@ def main(working_dir: PATH, args: argparse.Namespace):
     os.chdir(working_dir)
     info_graph_dot.setup()
 
-    templates_dir = os.path.abspath(os.path.join(me, '..', args.templates))
-    for name, path in get_templates(templates_dir):
-        log.info(f"{name}: {path}")
-        
-        info_graph_dot.run(name, path)
+    readme_all = os.path.join(working_dir, 'README.md')
+    with open(readme_all, 'w') as f:
+        f.write("# info_graph.dot\n")
+
+        templates_dir = os.path.abspath(os.path.join(me, '..', args.templates))
+        for name, path in get_templates(templates_dir):
+            log.info(f"{name}: {path}")
+            
+            filename = info_graph_dot.run(name, path)
+            f.write(f"[{name}]({filename})\n")
 
 
 if __name__ == "__main__":
@@ -45,7 +50,7 @@ if __name__ == "__main__":
     parser.add_argument('--templates', type=str, help='templates to generate')
     args = parser.parse_args()
 
-    working_dir = os.path.abspath(os.path.join(me, '..', '_working_dir'))
+    working_dir = os.path.abspath(os.path.join(me, '..', '_working_dir', args.templates))
     if os.path.exists(working_dir):
         shutil.rmtree(working_dir)
     os.mkdir(working_dir)
