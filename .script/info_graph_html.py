@@ -63,14 +63,9 @@ class InfoGraphHTML:
 
         # Take the picture
         picture_file = name + '.png'
-        #process = subprocess.Popen(['wkhtmltoimage', '--debug-javascript', '--javascript-delay', '5000', output_file, picture_file],
-        #process = subprocess.Popen(['firefox', '-headless', '--screenshot', picture_file, f"file://{output_file}"],
         command = ['google-chrome', '--headless', '--disable-gpu', '--screenshot', output_file]
-        log.info(f"Command: {' '.join(command)}")
         process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, stderr = process.communicate()
-        log.info(stdout)
-        log.info(stderr)
         shutil.copyfile("screenshot.png", picture_file)
 
         # Generate the output
