@@ -46,11 +46,11 @@ def main(working_dir: PATH, args: argparse.Namespace):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Create docs for templates')
-    #parser.add_argument('--working-dir', type=str, help='working directory')
+    parser.add_argument('--output', type=str, default=os.path.join(me, '..', '_working_dir'), help='working directory')
     parser.add_argument('--templates', type=str, help='templates to generate')
     args = parser.parse_args()
 
-    working_dir = os.path.abspath(os.path.join(me, '..', '_working_dir', args.templates))
+    working_dir = os.path.abspath(os.path.join(args.output, args.templates))
     if os.path.exists(working_dir):
         shutil.rmtree(working_dir)
     os.mkdir(working_dir)

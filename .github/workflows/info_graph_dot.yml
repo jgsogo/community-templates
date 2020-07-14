@@ -18,6 +18,8 @@ jobs:
 
         steps:
         - uses: actions/checkout@v1
+          with:
+            path: main
         - name: Set up Python ${{ matrix.python-version }}
           uses: actions/setup-python@v1
           with:
@@ -26,7 +28,7 @@ jobs:
           run: |
             sudo apt-get install graphviz
             python -m pip install --upgrade pip
-            pip install -r .script/requirements.txt
+            pip install -r main/.script/requirements.txt
 
         - uses: actions/checkout@master
           with:
@@ -36,7 +38,7 @@ jobs:
         - name: Generate output for all templates
           run: |
             mkdir -p _working_dir/info_graph_dot
-            python .script/main.py --templates=info_graph_dot
+            python main/.script/main.py --templates=info_graph_dot --output=_working_dir/info_graph_dot
 
         - name: Push changes
           uses: ad-m/github-push-action@master
