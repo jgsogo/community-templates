@@ -67,6 +67,7 @@ class InfoGraphHTML:
                      stdout=subprocess.PIPE, 
                      stderr=subprocess.PIPE)
         stdout, stderr = process.communicate()
+        log.info(stdout)
 
         # Generate the output
         with open(f"{name}.md", 'w') as f:

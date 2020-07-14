@@ -122,6 +122,12 @@
                     control.innerHTML = "<b>Package info</b>: No package selected";
                 }
             });
+
+            network.on("afterDrawing", function (ctx) {
+                //var dataURL = ctx.canvas.toDataURL();
+                //document.getElementById('canvasImg').src = dataURL;
+                console.log(">>> AfterDrawing")
+            });
         </script>
     </body>
 </html>
