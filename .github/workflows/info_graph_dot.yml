@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'info_graph_dot/**'
+    #paths:
+    #  - 'info_graph_dot/**'
   schedule:
     - cron:  '0 1 * * *'
 
@@ -18,3 +18,16 @@ jobs:
 
         steps:
         - uses: actions/checkout@v1
+        - name: Set up Python ${{ matrix.python-version }}
+          uses: actions/setup-python@v1
+          with:
+            python-version: ${{ matrix.python-version }}
+        - name: Install dependencies
+          run: |
+            sudo apt-get install graphviz
+            python -m pip install --upgrade pip
+            pip install -r .script/requirements.txt
+        - name: Compute graph
+          run: |
+            mkdir _output
+            python .script/main.py --templates=info_graph_dot
