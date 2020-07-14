@@ -39,8 +39,8 @@ jobs:
             python .script/main.py --templates=info_graph_dot
 
         - name: Push changes
-            uses: ad-m/github-push-action@master
-            with:
-                github_token: ${{ secrets.GITHUB_TOKEN }}
-                directory: _working_dir
-                branch: gh-pages
+          uses: ad-m/github-push-action@master
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            directory: _working_dir
+            branch: gh-pages
