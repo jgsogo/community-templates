@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Conan | jinja2cpp/1.1.0</title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap.min.css"/>
+        <style>
+            tr td {
+                white-space:nowrap;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+        <h1>jinja2cpp/1.1.0</h1>
+        <div class="info">
+            <p>
+                Depending on your package_id_mode, any combination of settings, options and requirements
+                can give you a different packageID. Take into account that your configuration might be
+                different from the one used to generate the packages.
+            </p>
+        </div>
+
+        <table id="results" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                        <th class="text-center" rowspan="2" colspan="1">
+                            remote
+                        </th>
+                        <th class="text-center" rowspan="2" colspan="1">
+                            package_id
+                        </th>
+                        <th class="text-center" rowspan="2" colspan="1">
+                            os
+                        </th>
+                        <th class="text-center" rowspan="2" colspan="1">
+                            arch
+                        </th>
+                        <th class="text-center" rowspan="1" colspan="4">
+                            compiler
+                        </th>
+                        <th class="text-center" rowspan="2" colspan="1">
+                            build_type
+                        </th>
+                        <th class="text-center" rowspan="1" colspan="2">
+                            options
+                        </th>
+                        <th class="text-center" rowspan="2" colspan="1">
+                            requires
+                        </th>
+                </tr>
+                <tr>
+                                <th>compiler</th>
+                                <th>libcxx</th>
+                                <th>runtime</th>
+                                <th>version</th>
+                                <th>shared</th>
+                                <th>fPIC</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>005b8eb6b0c4b83ed6a677346cde88e9a09e09cd</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>5.0</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>0128c068edcfd77eef4dc4d10157391c713dab84</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>3.9</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>028997d85ac2178df225412911d17227347f487b</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MD</td>
+                            <td>16</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>03cb324315486a5ebe8048bc2f4ec922fc21787c</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>091e37f9c49f72a80aafbe9af2dd3903914163cd</td>
+                            <td>Macos</td>
+                            <td>x86_64</td>
+                            <td>apple-clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>10.0</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>0d53f429ac341310de877ef78aeb6d8a10f0486f</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>7.0</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>1117e4dcfbde9b67192900b6d5fb409d18aa5557</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>5</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>11bf8319fccec4461395f0c6df9cfc8a756b1ce5</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>6.0</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>146f394fde87c4f232ebbd6298131aaecfcdf8bd</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>3.9</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>181d458ef6c45f5fc31732d7f0b22c7c664bfc0f</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>6</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>18bfa60259a4ea7c821140c8836cb6b74d8e7114</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>5.0</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>202b8ef6a13014f8c0b5036036cc40a13b74741f</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>230259a7511d115af69afe715b538f0a0fac22cf</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>4.9</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>23bca648a74bfc82362d2f1f04263a22770c9b94</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MDd</td>
+                            <td>15</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>2560ca36cb4d29af8d36576bbe3957b557f974ce</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>6</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>267c396d358bffe67e0c6a74d103c7be870f5c6e</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>7</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>28821f927c289dcd971a9cef3f51612deb772dbe</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>7</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>296637dea7a43f0b2db11abf657b956ce4ff0ed0</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>5.0</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>2cf6c6d0c3fa1001143d5ca92dd096645c275052</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>4.9</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>2da778b5b62ca003cb211bfa0975e1fbbb7b9df6</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>5.0</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>2f422abffdc2ab2a26d101ea1130d170260a2852</td>
+                            <td>Macos</td>
+                            <td>x86_64</td>
+                            <td>apple-clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>9.1</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>2f9dbf3c345648f0d92053e1978191564412da92</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>7</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>321f2d96f898c2331faaed7f7ebeda672143333d</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MT</td>
+                            <td>14</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>32c952f4e24d4747a22052b3e182f3426f85bee7</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>5</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>336161813d4a70c3ad06c2754d05a4ed26e19f6c</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MD</td>
+                            <td>15</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>3376d07adf46486ac608d3b00c10618dfaf285a0</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>4.0</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>33d9bff2cdd7b285889174bee60ad0ea32818ec2</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>5</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>341b6f4bc39ea7f0e22eef2c16ed1382b0a35aaf</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>5</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>3491e23c11f5eff421aedb5f6c40ad241837a146</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MT</td>
+                            <td>15</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>3acaa58082cc10e8e8f193ce422a656b2d61154a</td>
+                            <td>Macos</td>
+                            <td>x86_64</td>
+                            <td>apple-clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>11.0</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>3becc138d6b393e23e5def45b30bd8fc22998dab</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>6</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>3c0729ca1d67bd6abe0396c35bf97b87bf180578</td>
+                            <td>Macos</td>
+                            <td>x86_64</td>
+                            <td>apple-clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>10.0</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>3c1227a870928c93e02197a5a74016d96c4d7c21</td>
+                            <td>Macos</td>
+                            <td>x86_64</td>
+                            <td>apple-clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>9.1</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>3f2915c058a9a17f939093fa29f7a7f4d490ac04</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>4.0</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>42ab5bae9c4f3ec4c4bb36f7c811682961282540</td>
+                            <td>Macos</td>
+                            <td>x86_64</td>
+                            <td>apple-clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>10.0</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>431d2c2621d6f99d7b50a085cb044832a8b4a997</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>5</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>45d78ba01ee5e419bdb3aab520e7161958fa9a3e</td>
+                            <td>Macos</td>
+                            <td>x86_64</td>
+                            <td>apple-clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>9.1</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>46f28218a6abe497f0d28ba86032b937d8161e96</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>4766abbae9943be359056e90b9818867e2147dbe</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>490326fb75bc462e85f20d859dbbdac7f046b85c</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MD</td>
+                            <td>14</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>4cd1b31816c3ae1cd8e6f04dc5ea3f2653a57609</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>6</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>4f34b7b0e4514622d738e964984d4ae1dae4d893</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>4f5b45ecf9bbfd32b77a4675f5e5e73e53587bdb</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>7</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>522ff89831ccfc63c7c16560172e60a71208a5f6</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MD</td>
+                            <td>16</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>52ecc29c6e1d3682243ff741d9f17cfbf809ba7b</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>4.0</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>579459800de0d5517b402aacdbedd2495ecbc5d8</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>58cb7845a9e48923fbbef797e9b43fbcde3e7221</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>6</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>5c16727ea7c8bbf634234d6075bccf9339c667ab</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>5d87eecd4bfe4514dbf713be554821060b76418c</td>
+                            <td>Macos</td>
+                            <td>x86_64</td>
+                            <td>apple-clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>11.0</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>5ffaa1bd3cddce95e80385291d4a3154fe23dfd6</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>608b56cddd61389d2ea8745fd63b116b8a5ec90c</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>7.0</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>61739944f948a0d76abfb561e72a812e5528a74e</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>6.0</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>61899b0a7515c7ac24025310eb9cb72f6bf3cb6f</td>
+                            <td>Macos</td>
+                            <td>x86_64</td>
+                            <td>apple-clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>10.0</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>62bc7a581b4633cce115a74a4f95bb8403ada75e</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>3.9</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>65ea0c95bdedbf550ddf794a3c1cdfed482f4fd6</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>4.0</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>6c43ecbc78736f3f74ee2893c0ea33e03e614ddc</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>6c606c0d967965f9b103e4d69b6f7ebaf35c27d4</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>6db84d02f4aea71239ad85aa590e0e26e4a367d9</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MTd</td>
+                            <td>16</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>6e3a3297f6d9d6a2230cb1198ae8136b40f0907e</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MDd</td>
+                            <td>16</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>70e1e2ac7564a68d848dc3d311c856df1ae77d3e</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>5</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>70efc7811efb8ce90427f4125ba478d246fd1144</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MDd</td>
+                            <td>15</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>7911d5ff7735ae56b658f5230fcccaa3c0961096</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>80a7246246a057450eb2059f3eee6cc54dbc8c2f</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>842a57b9530e3652bd90815653ca91f1d4c18796</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>5</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>8768f4eb7e56f8be6b19ff321729d9d6af3d8f9c</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>4.0</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>88e7c60356f456fb5aac52aa0ccb07e00ce4dd9f</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>4.9</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>8f7c51884ad8d2264f5725cc0e28abca45944b69</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>6.0</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>90332f52d45e1184c4f9b5faa153ab75fdae8548</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>7.0</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>92b1c509563ff3e3b8bb70e8032035ccdb136159</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>93fdb10d59fac315b8e20830b6baaf46815fe225</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>5</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>951fba1e9cd6f2aefe7c3de95883a1c6474261da</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>9528cf27e83fad82fbedae07c8c538dbb605e359</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>9611514ecb82f8d1c46e9b181fddca946a83bfcc</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>6</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>9759576002b14c086e8bef62c89d14e725e95ed2</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>7.0</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>9927062ab3c00a4be017bd8285bb51634f2da225</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>99da88f388bfe3274931f9849125483955113261</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>7.0</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>99e98e0b1796e446eeb499c3cc7dcb6e9f129138</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>7</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>9f1dd8b843f55c9fcb3e2a5d775435a8bf2e8fd3</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MDd</td>
+                            <td>16</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>9f30341a2e964f86316bb01fa4b7ebc9e4c1412a</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>6</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>a1b9561b1c01a2713f940aab58d71e741e8b6670</td>
+                            <td>Macos</td>
+                            <td>x86_64</td>
+                            <td>apple-clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>11.0</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>a658f4168edcb55b66893a25c61b1ed295735b51</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MT</td>
+                            <td>16</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>a6ea48c355647c614da4e0dca9c5bdb8cfb87925</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MTd</td>
+                            <td>15</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>a755f7b56db98bbe9973b81db94c6ae1a445e456</td>
+                            <td>Macos</td>
+                            <td>x86_64</td>
+                            <td>apple-clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>9.1</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>a7c14b7f1ba6c33dfa8164898f6eb3e88777c9ea</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>7.0</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>ab0c535deae2bab8dd022bf4bf0709dddda056e0</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MTd</td>
+                            <td>14</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>ad799ce92bfa742b5a2e0b59fbd92e1f265fdc8b</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>ad7d57df32fd5c90e23abfb290414692d3180239</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MD</td>
+                            <td>14</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>b171e5aae5e090ff9b183d9e3dfe7e9b91feb686</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>6.0</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>b29e737455a36a99da12becf7980e1be034d5412</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>7.0</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>b4391740f2a633695c06c7e571fdd363c7cc6e84</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>6.0</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>b5a806848eee349781d7332d43ad16d05166ad3d</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>b5e71b927570a3474f46e755e443dcb68e97d440</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>b66e99a6efb1a3aea918b4fb88deb964043f6298</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>b9762aa4ddc3728890a09c723faa6d6ab98801fd</td>
+                            <td>Macos</td>
+                            <td>x86_64</td>
+                            <td>apple-clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>11.0</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>bb1876031b58246c16ce83b81bac6d53e3fbf3d2</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>4.0</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>c3cb63ca6f15862005e9988bcd03946b39a05d2f</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>3.9</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>c460b7a4ce6c797010f63d553e9f2b5695cfd204</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>c7cf7daebf47c90e7cc61204d9804873eba073b8</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>6.0</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>c8c5453d72448375587f603dda59acda483ea04c</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>6</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>cbeeed94540b1fe024db7779888be7627ce1dabc</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>4.0</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>ce05e27147be2dbb207a8c28c166bbbf9b6419fb</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MDd</td>
+                            <td>14</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>cfe3ef2ceaea022e934553228b3f1d895a1e1e0e</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>6.0</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>d1b8df3c12f685d42905e00fecb18bd4e95c7050</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MDd</td>
+                            <td>14</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>d1cdd50dd5b2ef5e5fcbf4139ddada6137225d88</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>7</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>d1ed7528d129ea3b5a738b1d09cde2c0d9194745</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>6.0</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>d56e42861c3e1f3d93e5fdbf6ffeb8b3d3d2e499</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>4.0</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>d7af6a911d3761d60ebb50aaf2d80c85df3f6ad7</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>d98b57c5cf5b726e66f9121ad0dc52c48b63e285</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>e25f02939483e46bb6b1d04a056756fefea19fc8</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>e4c1357747b38b5545791e8b8c42af62e0be8848</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>7</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>e5c100bff379f1c957ab6365f6d255274ea1d25b</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>3.9</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>e7ce35f2c237f1f76ef1ef972550ac55e9f6c105</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>5.0</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>e7cef332dbf04b04ff46396423f9f597ba38f2a4</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>e90ffb7ca203018b1db5dfe113d4656bfc33ce54</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>4.9</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>e93ac13bf0faacc31fa77d30916a031f52bd4972</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>7</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>ee1241dcf17a11ffd9b66f3eed43ff4d473ecf41</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>ef4e2df2d5051d7df571efba8bf9bd9951cd887d</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>3.9</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>f04a137cbcfdd018f2b1a4638e6ca1e5c885f988</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>f0e9d686a974b1dfa23d869bc27e54df0eff27a2</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++11</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>f170adea0e80209ddd1d664e3ef67c5491d9e9b8</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Debug</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>f26302d8a67fa4a9787149ec4496065d03ea8ae0</td>
+                            <td>Windows</td>
+                            <td>x86_64</td>
+                            <td>Visual Studio</td>
+                            <td></td>
+                            <td>MD</td>
+                            <td>15</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>f65b6c2e631207fce913de9016a79b8c2812aa44</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>3.9</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>f67f7718f5cb3e2dec0c7329da8919566afdd5f3</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>7.0</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>f6d03ebe7475fdfe512909c37fe2a3a1734a5197</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>f8b18a2b62562c4ebecda0a0ba6a43447aca214c</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>5.0</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>f98341b8df0758acc5ee6d87606a831aff89a97e</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>3.9</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>fbd3c7f3ec5167aea39c63de968dca49efe9f99d</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>5.0</td>
+                            <td>Debug</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>fdd2b3e44ead491da0010c11850490a6c73981b9</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>gcc</td>
+                            <td>libstdc++</td>
+                            <td></td>
+                            <td>8</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>fe9dc9cc16fd5d57cbd2af5731052100f9dc4af0</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>9</td>
+                            <td>Release</td>
+                            <td>False</td>
+                            <td>True</td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+                    <tr>
+                            <td>conan-center</td>
+                            <td>feec6908ad99ac2728ff4865b375ddc47c9dc26a</td>
+                            <td>Linux</td>
+                            <td>x86_64</td>
+                            <td>clang</td>
+                            <td>libc++</td>
+                            <td></td>
+                            <td>5.0</td>
+                            <td>Release</td>
+                            <td>True</td>
+                            <td></td>
+                            <td>boost/1.72.0, bzip2/1.0.8, expected-lite/0.3.0, fmt/6.1.2, optional-lite/3.2.0, rapidjson/1.1.0, string-view-lite/1.3.0, variant-lite/1.2.2, zlib/1.2.11</td>
+                    </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>remote</th>
+                    <th>package_id</th>
+                    <th>os</th>
+                    <th>arch</th>
+                    <th>compiler</th>
+                    <th>compiler.libcxx</th>
+                    <th>compiler.runtime</th>
+                    <th>compiler.version</th>
+                    <th>build_type</th>
+                    <th>shared</th>
+                    <th>fPIC</th>
+                    <th>requires</th>
+                </tr>
+            </tfoot>
+        </table>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.20/datatables.min.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // Setup - add a text input to each footer cell
+                $('#results tfoot th').each( function () {
+                    var title = $(this).text();
+                    $(this).html( '<input type="text" class="form-control filter-input" placeholder="Filter '+title+'" style="width:100%"/>' );
+                });
+
+                var table = $('#results').DataTable( {
+                    "dom": "lrtip",
+                    "lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+                    "pageLength": 10,
+                    "columnDefs": [
+                        { className: "cell_border_right", "targets": [ 8, 10  ] },
+                        { className: "cell_border_right monospaced", "targets": [1, ]}
+                    ]
+                });
+
+                // Apply the search
+                table.columns().every( function () {
+                    var that = this;
+
+                    $( 'input', this.footer() ).on( 'keyup change clear', function () {
+                        if ( that.search() !== this.value ) {
+                            that
+                                .search( this.value )
+                                .draw();
+                        }
+                    } );
+                } );
+            });
+        </script>
+    </div>
+    </body>
+</html>
