@@ -1,6 +1,7 @@
 <html lang="en">
     <head>
         {# For backwards compatibility we prefer local assets over the ones in internet #}
+        <script type="text/javascript" src="https://cdn.polyfill.io/v2/polyfill.js?features=requestAnimationFrame,Function.prototype.bind&unknown=polyfill"></script>
         <script type="text/javascript" src="{{ assets.vis_js|default("https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.1/vis.min.js") }}"></script>
         <link href="{{ assets.vis_css|default("https://cdnjs.cloudflare.com/ajax/libs/vis/4.18.1/vis.min.css") }}" rel="stylesheet" type="text/css"/>
     </head>
@@ -32,8 +33,8 @@
             }
         </style>
 
-        <div style="width:800px;height:800px;">
-            <div id="mynetwork" style="width:800px;height:800px;"></div>
+        <div style="width: 100%;">
+            <div id="mynetwork" style="float:left; width: 75%;"></div>
             <div style="float:right;width:25%;">
                 <div id="details" style="padding:10;" class="noPrint">Package info: no package selected</div>
                 <button onclick="javascript:showhideclass('controls')" class="button noPrint">
@@ -83,9 +84,7 @@
                 edges: edges
             };
             var options = {
-                autoResize: false,
-                height: '100%',
-                width: '100%',
+                autoResize: true,
                 locale: 'en',
                 edges: {
                     arrows: { to: {enabled: true} },
@@ -128,7 +127,7 @@
             network.on("afterDrawing", function (ctx) {
                 //var dataURL = ctx.canvas.toDataURL();
                 //document.getElementById('canvasImg').src = dataURL;
-                console.log(">>> AfterDrawing")
+                console.log(">>>")
             });
         </script>
     </body>
