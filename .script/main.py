@@ -34,14 +34,14 @@ def main(working_dir: PATH, args: argparse.Namespace):
 
     readme_all = os.path.join(working_dir, 'README.md')
     with open(readme_all, 'w') as f:
-        f.write("# info_graph.dot\n")
+        f.write("# info_graph.dot\n\n")
 
         templates_dir = os.path.abspath(os.path.join(me, '..', args.templates))
         for name, path in get_templates(templates_dir):
             log.info(f"{name}: {path}")
             
             filename = info_graph_dot.run(name, path)
-            f.write(f"[{name}]({filename})\n")
+            f.write(f"* [{name}]({filename})\n")
 
 
 if __name__ == "__main__":
