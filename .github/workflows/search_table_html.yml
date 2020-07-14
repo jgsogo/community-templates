@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'search_table_html/**'
   schedule:
     - cron:  '0 1 * * *'
 

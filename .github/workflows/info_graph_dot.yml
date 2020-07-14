@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+    paths:
+      - 'info_graph_dot/**'
   schedule:
     - cron:  '0 1 * * *'
 
