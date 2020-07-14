@@ -37,10 +37,8 @@ jobs:
 
         - name: Generate output for all templates
           run: |
-            ls -la _working_dir/info_graph_dot
             mkdir -p _working_dir/info_graph_dot
             python main/.script/main.py --templates=info_graph_dot --output=_working_dir
-            ls -la _working_dir/info_graph_dot
             
         - name: Commit and push
           run: |
