@@ -29,13 +29,14 @@ jobs:
             pip install -r .script/requirements.txt
         - name: Generate output for all templates
           run: |
-            mkdir _working_dir/info_graph_dot
+            mkdir -p _working_dir/info_graph_dot
             python .script/main.py --templates=info_graph_dot
 
         - name: Deploy to gh-pages
           run: |
-            cd _output
+            cd _working_dir
             echo ".nojekyll" > .nojekyll
+            echo "[info_graph_dot](info_graph_dot/README.md)\n" > README.md
             git init .
             git checkout -b gh-pages
             git add .
