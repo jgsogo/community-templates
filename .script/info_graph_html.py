@@ -62,9 +62,10 @@ class InfoGraphHTML:
         stdout, stderr = process.communicate()
 
         # Take the picture
+        output_file = os.path.abspath(output_file)
         picture_file = name + '.png'
         #process = subprocess.Popen(['wkhtmltoimage', '--debug-javascript', '--javascript-delay', '5000', output_file, picture_file],
-        process = subprocess.Popen(['firefox', '-headless', '--screenshot', picture_file, output_file],
+        process = subprocess.Popen(['firefox', '-headless', '--screenshot', picture_file, f"file://{output_file}"],
                      stdout=subprocess.PIPE, 
                      stderr=subprocess.PIPE)
         stdout, stderr = process.communicate()
