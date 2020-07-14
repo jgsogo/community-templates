@@ -28,6 +28,8 @@ jobs:
           run: |
             sudo apt-get install graphviz
             python -m pip install --upgrade pip
+            ls -la
+            ls -la main
             pip install -r main/.script/requirements.txt
 
         - uses: actions/checkout@master
