@@ -34,6 +34,7 @@ jobs:
             sudo apt -y install wget
             wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.bionic_amd64.deb
             sudo apt install ./wkhtmltox_0.12.5-1.bionic_amd64.deb
+            wkhtmltoimage --extended-help
             python -m pip install --upgrade pip
             pip install -r main/.script/requirements.txt
 
@@ -47,6 +48,7 @@ jobs:
             cd _working_dir
             git config user.name github-actions
             git config user.email github-actions-bot@users.noreply.github.com
+            git config pull.rebase true
             git pull
             git add .
             git commit -m "Generated files for 'info_graph.html' templates"

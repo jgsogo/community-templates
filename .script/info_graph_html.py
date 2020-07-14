@@ -63,7 +63,7 @@ class InfoGraphHTML:
 
         # Take the picture
         picture_file = name + '.png'
-        process = subprocess.Popen(['wkhtmltoimage', output_file, picture_file],
+        process = subprocess.Popen(['wkhtmltoimage', '--javascript-delay', '1000', output_file, picture_file],
                      stdout=subprocess.PIPE, 
                      stderr=subprocess.PIPE)
         stdout, stderr = process.communicate()
