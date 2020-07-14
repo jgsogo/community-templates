@@ -1,4 +1,4 @@
-name: Generate docs for 'search_table.html' template
+name: Run 'search_table.html' templates
 
 on:
   push:

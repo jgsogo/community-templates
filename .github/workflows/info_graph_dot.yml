@@ -1,4 +1,4 @@
-name: Generate docs for 'info_graph.dot' template
+name: Run 'info_graph.dot' templates
 
 on:
   push:
