@@ -27,21 +27,20 @@ jobs:
             sudo apt-get install graphviz
             python -m pip install --upgrade pip
             pip install -r .script/requirements.txt
+
+        - uses: actions/checkout@master
+          with:
+            ref: gh-pages
+            path: _working_dir
+
         - name: Generate output for all templates
           run: |
             mkdir -p _working_dir/info_graph_dot
             python .script/main.py --templates=info_graph_dot
 
-        - name: Deploy to gh-pages
-          run: |
-            cd _working_dir
-            echo ".nojekyll" > .nojekyll
-            echo "[info_graph_dot](info_graph_dot/README.md)\n" > README.md
-            git init .
-            git checkout -b gh-pages
-            git add .
-            git config user.email "actions@github.com"
-            git config user.name "GitHub actions"
-            git commit -m "Automatic from Github actions"
-            git remote add origin-pages https://jgsogo:${{ secrets.GITHUB_TOKEN }}@github.com/jgsogo/community-templates.git > /dev/null 2>&1
-            git push --quiet --force --set-upstream origin-pages gh-pages
+        - name: Push changes
+            uses: ad-m/github-push-action@master
+            with:
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                directory: _working_dir
+                branch: gh-pages
