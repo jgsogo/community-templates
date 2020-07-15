@@ -45,7 +45,7 @@ def main(working_dir: PATH, args: argparse.Namespace):
 
     readme_all = os.path.join(working_dir, 'README.md')
     with open(readme_all, 'w') as f:
-        f.write("# info_graph.dot\n\n")
+        f.write(f"# {command.template_filename}\n\n")
 
         templates_dir = os.path.abspath(os.path.join(me, '..', args.templates))
         for name, path in get_templates(templates_dir):
