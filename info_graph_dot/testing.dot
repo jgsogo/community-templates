@@ -1,7 +1,7 @@
 digraph {
+        "boost/1.72.0" -> "AAA"
+        "boost/1.72.0" -> "AAA"
         "virtual" -> "AAA"
-        "boost/1.72.0" -> "AAA"
-        "boost/1.72.0" -> "AAA"
         "jinja2cpp/1.1.0" -> "AAA"
         "jinja2cpp/1.1.0" -> "AAA"
         "jinja2cpp/1.1.0" -> "AAA"
