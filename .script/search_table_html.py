@@ -63,7 +63,7 @@ class SearchTableHTML:
 
         # Take the picture
         picture_file = name + '.png'
-        command = ['google-chrome', '--headless', '--disable-gpu', '--screenshot', '--window-size=1280,1696', output_file]
+        command = ['google-chrome', '--headless', '--disable-gpu', '--screenshot', '--window-size=1920,1200', output_file]
         process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, stderr = process.communicate()
         shutil.copyfile("screenshot.png", picture_file)
