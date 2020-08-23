@@ -1,6 +1,4 @@
 digraph {
-        "boost/1.72.0" -> "zlib/1.2.11"
-        "boost/1.72.0" -> "bzip2/1.0.8"
         "jinja2cpp/1.1.0" -> "variant-lite/1.2.2"
         "jinja2cpp/1.1.0" -> "expected-lite/0.3.0"
         "jinja2cpp/1.1.0" -> "optional-lite/3.2.0"
@@ -9,4 +7,6 @@ digraph {
         "jinja2cpp/1.1.0" -> "fmt/6.1.2"
         "jinja2cpp/1.1.0" -> "rapidjson/1.1.0"
         "virtual" -> "jinja2cpp/1.1.0"
+        "boost/1.72.0" -> "zlib/1.2.11"
+        "boost/1.72.0" -> "bzip2/1.0.8"
 }
