@@ -109,7 +109,6 @@
                                    '    <li><b>url</b>: <a href="https://github.com/conan-io/conan-center-index">https://github.com/conan-io/conan-center-index</a></li>' +
                                    '    <li><b>homepage</b>: <a href="https://github.com/martinmoene/variant-lite">https://github.com/martinmoene/variant-lite</a></li>' +
                                    '    <li><b>license</b>: BSL-1.0</li>' +
-                                   '    <li><b>author</b>: Martin Moene</li>' +
                                    '    <li><b>topics</b>: conan, cpp98, cpp11, cpp14, cpp17, variant, variant-implementations</li>' +
                                    '</ul>'
                     },
@@ -199,8 +198,6 @@
                     }
             ]);
             var edges = new vis.DataSet([
-                    { from: 2, to: 3 },
-                    { from: 2, to: 10 },
                     { from: 0, to: 1 },
                     { from: 1, to: 2 },
                     { from: 1, to: 9 },
@@ -208,7 +205,9 @@
                     { from: 1, to: 7 },
                     { from: 1, to: 6 },
                     { from: 1, to: 5 },
-                    { from: 1, to: 4 }
+                    { from: 1, to: 4 },
+                    { from: 2, to: 3 },
+                    { from: 2, to: 10 }
             ]);
 
             var container = document.getElementById('mynetwork');
